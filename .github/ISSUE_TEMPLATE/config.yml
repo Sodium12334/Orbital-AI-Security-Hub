@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/Sodium12334/Orbital-AI-Security-Hub/discussions
+    about: Ask questions, share ideas, and connect with other contributors.
+  - name: 🔒 Report a security vulnerability
+    url: https://github.com/Sodium12334/Orbital-AI-Security-Hub/security/advisories/new
+    about: Please report vulnerabilities privately, not as public issues.
