@@ -1,0 +1,68 @@
+name: 🐛 Bug report
+description: Something in Orbital isn't working as expected.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report! The more detail you
+        provide, the faster we can help.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the bug.
+      placeholder: "When I click Inject Incident on the Simulation page, nothing happens…"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Minimal, deterministic steps we can follow.
+      placeholder: |
+        1. Run `npm install && npm run dev`
+        2. Navigate to `/simulation`
+        3. Click "Inject Incident"
+        4. Observe …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser & OS
+      placeholder: "Chrome 130 on macOS 15"
+  - type: input
+    id: node
+    attributes:
+      label: Node.js version
+      placeholder: "20.11.1"
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Which mode were you running?
+      options:
+        - Local Mode (default)
+        - Hybrid (some VITE_* providers configured)
+        - Full external (no local providers)
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console / network logs
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      options:
+        - label: I agree to follow this project's [Code of Conduct](../CODE_OF_CONDUCT.md).
+          required: true
